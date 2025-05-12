@@ -1,14 +1,25 @@
 *{
   margin: 0;
+  padding: 0;
 }
 
+.navbar{
+  background-color: #ccc;
+}
 .navbar ul li{
   display: inline;
 }
-
+.navbar ul li a {
+  text-decoration: none;
+  color: #4F8DF9;
+  margin: 5px;
+}
+body{
+  background-color: #ccc;
+}
 h1{
   text-align: center;
-  color: pink;
+  color: #333333;
 }
 
 
@@ -25,8 +36,7 @@ h1{
 .card {
   width: 220px;       
   height: 270px;     
-  border: 1px solid #ccc;
-  
+  color:#4F8DF9;
   border-radius: 8px;
   overflow: hidden;  
   text-align: center;
@@ -45,10 +55,11 @@ h1{
   margin: 10px;
 }
 
+
+
 /*Seccion Budines */
 .seccion-budines{
   padding: 40px 20px;
-  background-color: gray;
 }
 .div-budines {
   text-align: center;
@@ -57,11 +68,95 @@ h1{
 .budines {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: pink;
-}
+ }
 
 .div-budines img{
   width: 300px;
   height: 300px;
   margin: 20px;
+}
+
+/*Seccion video */
+
+.seccion-video{
+  text-align: center;
+}
+
+/*Seccion Ubicacion */
+
+.seccion-ubicacion{
+  text-align: center;
+}
+
+/*Seccion Contacto*/
+
+.seccion-contacto{
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/*Footer */
+footer {
+  background-color: #111;
+  color: #ddd;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+footer a {
+  color: #28a745;
+  text-decoration: none;
+}
+
+footer a:hover {
+ text-decoration: underline;
 }
