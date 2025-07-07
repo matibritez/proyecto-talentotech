@@ -223,3 +223,58 @@ footer a:hover {
     font-size: 14px;
   }
 }
+
+/* Seccion Resenias */
+
+.reviews-section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #fff9f9;
+}
+
+.reviews-section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #d96c75;
+}
+
+.review-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.02);
+}
+
+.review-card h3 {
+  margin: 0;
+  color: #d96c75;
+  font-weight: bold;
+}
+
+.stars {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #f7c548;
+}
+
+.review-card p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .review-card {
+    display: inline-block;
+    width: 45%;
+    margin: 2%;
+    vertical-align: top;
+  }
+}
