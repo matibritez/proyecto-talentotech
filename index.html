@@ -1,84 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasteleria</title>
-    <link rel="stylesheet" href="./styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pasteleria</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <header> 
+  <header>
     <nav class="navbar">
       <ul>
-        <li><a href="">Inicio</a></li>
-        <li><a href="">Sobre nosotros</a></li>
-        <li><a href="">Ubicacion</a></li>
-        <li><a href="">Contacto</a></li>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#reseñas">Sobre nosotros</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+
+        <!-- Carrito -->
+        <li class="carrito-navbar">
+          <button id="btn-carrito" aria-label="Ver carrito">
+            🛒
+            <span id="cantidad-carrito"></span>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
 
   <main class="main">
-    
     <h1>Pasteleria</h1>
 
     <section id="principal" class="principal">
       <!--Contenido traido desde js-->
     </section>
-    
+
     <!--Seccion Budines-->
     <section class="seccion-budines">
       <div class="div-budines">
         <h2 class="budines">Budines</h2>
-        <img src="./imagenes/budinChoco.png">
-        <img src="./imagenes/BudinesGrupal.png">
-        <img src="./imagenes/Budin1era.png">
+        <img src="./imagenes/budinChoco.png" />
+        <img src="./imagenes/BudinesGrupal.png" />
+        <img src="./imagenes/Budin1era.png" />
       </div>
     </section>
 
     <!--Seccion Video-->
     <div style="position: relative; width: 100%; max-width: 800px; margin: auto;">
-      <video style="width: 100%; height: auto;" controls autoplay muted loop>
-      <source src="./videos/Video.mp4" type="video/mp4">
+      <video muted style="width: 100%; height: auto;" controls autoplay loop>
+        <source src="./videos/Video.mp4" type="video/mp4" />
         Tu navegador no soporta el video.
       </video>
     </div>
 
-    
     <!--Seccion ubicacion -->
-    <section class="seccion-ubicacion">
+    <section id="ubicacion" class="seccion-ubicacion">
       <h2 class="Ubicacion">Visitanos en</h2>
       <div style="position: relative; width: 100%; max-width: 800px; margin: auto;">
-        <iframe 
+        <iframe
           src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d819.6200752943524!2d-58.26940617179958!3d-34.743491974879696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1747089483741!5m2!1ses!2sar"
-          style="border:0; width: 100%; height: 450px;"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+          style="border: 0; width: 100%; height: 450px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </section>
-    
+
     <!--Seccion Contacto-->
-    <section class="seccion-contacto">
-      <div class="div-contacto">
-        <h2>Contactanos </h2>
+    <section id="contacto" class="seccion-contacto">
+  <div class="div-contacto">
+    <h2>Contactanos</h2>
 
-        <form action="mailto:tuemail@ejemplo.com" method="POST" enctype="text/plain">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
+    <form action="https://formspree.io/f/meokbevl" method="POST">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required />
 
-          <label for="email">Correo electrónico:</label>
-          <input type="email" id="email" name="email" required>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required />
 
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-        
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-    </section>
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
 
     <!-- Seccion de Reseñas -->
-    <section class="reviews-section">
+    <section id="reseñas" class="reviews-section">
       <h2>Reseñas de nuestros clientes</h2>
 
       <div class="review-card">
@@ -109,10 +118,26 @@
       </div>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 Matias. Todos los derechos reservados.</p>
-    <p>Desarrollado por <a href="#">MatiDev.</a></p>
+    <p>
+      Desarrollado por
+      <a href="#">MatiDev.</a>
+    </p>
   </footer>
+
+  <!-- Modal carrito -->
+  <div id="modal-carrito" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCarritoTitulo" aria-describedby="modalCarritoDescripcion">
+    <div class="modal-content">
+      <button id="cerrar-modal" class="cerrar" aria-label="Cerrar carrito">&times;</button>
+      <h2 id="modalCarritoTitulo">Carrito de Compras</h2>
+      <ul id="lista-carrito-modal"></ul>
+      <p id="total-carrito-modal">Total: $0</p>
+    </div>
+  </div>
+
   <script src="index.js"></script>
 </body>
 </html>
+
