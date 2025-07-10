@@ -7,6 +7,7 @@
 body {
   background-color: #ccc;
   font-family: Arial, sans-serif;
+  margin-top: 70px;
 }
 
 h1, h2 {
@@ -16,9 +17,17 @@ h1, h2 {
 
 /* Navbar */
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 700;
   background-color: #ccc;
-  padding: 10px 0;
+  padding: 2px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+
 .navbar ul {
   list-style: none;
   display: flex;
@@ -343,20 +352,26 @@ footer a:hover {
 }
 
 /* Botón cerrar modal */
-.cerrar-modal {
+#cerrar-modal {
   position: absolute;
   top: 10px;
   right: 15px;
   background: transparent;
   color: #333;
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  width: auto;
+  height: auto;
+  padding: 0;
+  line-height: 1;
   cursor: pointer;
   font-weight: bold;
   z-index: 20;
+  display: inline;
 }
 
-.cerrar-modal:hover {
+ 
+#cerrar-modal:hover {
   background: none; 
 }
 
@@ -427,3 +442,37 @@ footer a:hover {
 }
 
 
+.boton-finalizar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.boton-finalizar:hover {
+  background-color: #218838;
+}
+
+
+/* Modal de éxito */
+.modal-exito-content {
+  text-align: center;
+  max-width: 350px;
+  padding: 30px;
+}
+
+.modal-exito-content h2 {
+  color: #28a745;
+  margin-bottom: 10px;
+}
+
+.modal-exito-content p {
+  font-size: 1rem;
+  color: #333;
+}

@@ -158,3 +158,51 @@ window.addEventListener("click", e => {
 guardarCarrito();
 
 
+// Referencias para finalizar compra y selección método de pago
+const finalizarCompraBtn = document.getElementById('finalizar-compra'); // botón que abre el modal
+const modalFinalizar = document.getElementById('modal-finalizar');
+const cerrarFinalizar = document.getElementById('cerrar-modal-finalizar');
+const pasoPago = document.getElementById('paso-pago');
+const pasoConfirmacion = document.getElementById('paso-confirmacion');
+const medioSeleccionadoSpan = document.getElementById('medio-seleccionado');
+const botonesMedioPago = document.querySelectorAll('.medio-pago-btn');
+
+finalizarCompraBtn.addEventListener('click', () => {
+  if (carrito.length === 0) {
+    alert("No se puede finalizar la compra porque el carrito está vacío.");
+    return; // Sale de la función sin abrir el modal
+  }
+  
+  // Si el carrito tiene productos, abre el modal
+  modalFinalizar.style.display = 'block';
+  pasoPago.style.display = 'block';
+  pasoConfirmacion.style.display = 'none';
+});
+
+
+cerrarFinalizar.addEventListener('click', () => {
+  modalFinalizar.style.display = 'none';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target === modalFinalizar) {
+    modalFinalizar.style.display = 'none';
+  }
+});
+
+botonesMedioPago.forEach(boton => {
+  boton.addEventListener('click', () => {
+    const medio = boton.getAttribute('data-pago');
+    medioSeleccionadoSpan.textContent = medio;
+
+    // Ocultar paso de pago, mostrar confirmación
+    pasoPago.style.display = 'none';
+    pasoConfirmacion.style.display = 'block';
+
+    // Limpiar carrito
+    carrito = [];
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+    mostrarCarritoModal();
+    actualizarCantidad();
+  });
+});
