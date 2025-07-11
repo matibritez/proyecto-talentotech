@@ -158,8 +158,8 @@ window.addEventListener("click", e => {
 guardarCarrito();
 
 
-// Referencias para finalizar compra y selección método de pago
-const finalizarCompraBtn = document.getElementById('finalizar-compra'); // botón que abre el modal
+// finalizar compra y seleccion metodo de pago
+const finalizarCompraBtn = document.getElementById('finalizar-compra'); 
 const modalFinalizar = document.getElementById('modal-finalizar');
 const cerrarFinalizar = document.getElementById('cerrar-modal-finalizar');
 const pasoPago = document.getElementById('paso-pago');
