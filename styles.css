@@ -34,7 +34,7 @@ h1, h2 {
 .navbar ul {
   list-style: none;
   display: flex;
-  flex-direction: row; /* Siempre horizontal */
+  flex-direction: row; 
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
@@ -73,7 +73,7 @@ h1, h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Alinea texto y botones al final */
-  padding: 10px; /* Espacio interno */
+  padding: 10px; 
   box-sizing: border-box;
   margin-bottom: 15px;
 }
@@ -96,7 +96,7 @@ h1, h2 {
 }
 
 .boton-comprar {
-  margin-top: auto; /* Empuja el botón hacia abajo */
+  margin-top: auto; 
   padding: 8px 12px;
   background-color: #4F8DF9;
   color: white;
@@ -142,6 +142,7 @@ h1, h2 {
   margin: 20px;
 }
 
+/* FORMULARIO DE CONTACTO */
 form {
   width: 100%;
   max-width: 400px;
@@ -187,11 +188,11 @@ button:hover {
 
 /* REVIEWS */
 .review-card {
-  max-width: 600px;  /* más pequeño que la sección */
+  max-width: 600px; 
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
-  background-color: #e7f1ff; /* otro pastel suave, azul claro */
+  background-color: #e7f1ff;
   padding: 15px 20px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.07);
@@ -203,7 +204,7 @@ button:hover {
 }
 
 .review-card h3 {
-  color: #6b7a8f; /* gris azulado más sutil */
+  color: #6b7a8f;
 }
 
 .stars {
@@ -234,7 +235,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* CARRITO */
+/* CARRITO MODAL*/
 .carrito-navbar {
   position: relative;
 }
@@ -377,6 +378,7 @@ footer a:hover {
   background-color: #218838;
 }
 
+/* MODAL DE EXITO */
 .modal-exito-content {
   text-align: center;
   max-width: 350px;
@@ -394,6 +396,8 @@ footer a:hover {
 }
 
 /* MEDIA QUERIES */
+
+/*Estilos para pantallas hasta 480px de ancho(celulares chicos) */
 
 @media (max-width: 480px) {
   .navbar ul {
@@ -414,6 +418,7 @@ footer a:hover {
   }
 }
 
+/*Estilos para pantallas hasta 768px de ancho (tablets o celulares grandes */
 @media (max-width: 768px) {
   .card {
     width: 90%;
@@ -432,6 +437,8 @@ footer a:hover {
   }
 }
 
+/*Estilos para pantallas en horizontal.(tablets giradas)*/
+
 @media screen and (orientation: landscape) and (max-height: 500px) {
   .navbar ul {
     gap: 8px;
@@ -443,6 +450,8 @@ footer a:hover {
     margin: 5% auto;
   }
 }
+
+/*Estilos para pantallas medianas (entre 600px y 900px de ancho) */
 
 @media (min-width: 600px) and (max-width: 900px) {
   .navbar ul {

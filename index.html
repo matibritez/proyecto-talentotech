@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+
+  <!-- Header y Navbar -->
   <header>
     <nav class="navbar">
       <ul>
@@ -15,7 +17,7 @@
         <li><a href="#ubicacion">Ubicación</a></li>
         <li><a href="#contacto">Contacto</a></li>
 
-        <!-- Carrito -->
+        <!-- Boton del Carrito -->
         <li class="carrito-navbar">
           <button id="btn-carrito" aria-label="Ver carrito">
             🛒
@@ -26,11 +28,13 @@
     </nav>
   </header>
 
-  <main  class="main">
+  <!--Contenido principal-->
+  <main class="main">
     <h1 id="titulo">Pasteleria</h1>
 
+    <!-- Seccion de Productos(cards generadas desde Js)-->
     <section id="principal" class="principal">
-      <!--Contenido traido desde js-->
+      <!--Contenido dinamico traido desde js-->
     </section>
 
     <!--Seccion Budines-->
@@ -67,24 +71,24 @@
 
     <!--Seccion Contacto-->
     <section id="contacto" class="seccion-contacto">
-  <div class="div-contacto">
-    <h2>Contactanos</h2>
+      <div class="div-contacto">
+        <h2>Contactanos</h2>
 
-    <form action="https://formspree.io/f/meokbevl" method="POST">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required />
+        <!-- Formulario Formspree-->
+        <form action="https://formspree.io/f/meokbevl" method="POST">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
 
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required />
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required />
 
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-</section>
-
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
 
     <!-- Seccion de Reseñas -->
     <section id="reseñas" class="reviews-section">
@@ -119,6 +123,7 @@
     </section>
   </main>
 
+  <!--Footer-->
   <footer>
     <p>&copy; 2025 Matias. Todos los derechos reservados.</p>
     <p>
@@ -127,41 +132,41 @@
     </p>
   </footer>
 
- <!-- Modal carrito -->
-<div id="modal-carrito" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCarritoTitulo" aria-describedby="modalCarritoDescripcion">
-  <div class="modal-content">
-    <button id="cerrar-modal" class="cerrar" aria-label="Cerrar carrito">&times;</button>
-    <h2 id="modalCarritoTitulo">Carrito de Compras</h2>
-    <ul id="lista-carrito-modal"></ul>
+  <!-- Modal carrito -->
+  <div id="modal-carrito" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalCarritoTitulo" aria-describedby="modalCarritoDescripcion">
+    <div class="modal-content">
+      <button id="cerrar-modal" class="cerrar" aria-label="Cerrar carrito">&times;</button>
+      <h2 id="modalCarritoTitulo">Carrito de Compras</h2>
+      <ul id="lista-carrito-modal"></ul>
 
-    <div class="carrito-footer">
-      <button id="finalizar-compra" class="boton-finalizar">Finalizar compra</button>
-      <p id="total-carrito-modal">Total: $0</p>
+      <div class="carrito-footer">
+        <button id="finalizar-compra" class="boton-finalizar">Finalizar compra</button>
+        <p id="total-carrito-modal">Total: $0</p>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Modal finalización compra -->
-<div id="modal-finalizar" class="modal">
-  <div class="modal-content modal-finalizar-content">
-    <button id="cerrar-modal-finalizar" class="cerrar-modal" aria-label="Cerrar">&times;</button>
+  <!-- Modal finalización compra -->
+  <div id="modal-finalizar" class="modal">
+    <div class="modal-content modal-finalizar-content">
+      <button id="cerrar-modal-finalizar" class="cerrar-modal" aria-label="Cerrar">&times;</button>
 
-    <div id="paso-pago">
-      <h2>Seleccione medio de pago</h2>
-      <button class="medio-pago-btn" data-pago="Tarjeta de Crédito">Tarjeta de Crédito</button>
-      <button class="medio-pago-btn" data-pago="Transferencia Bancaria">Transferencia Bancaria</button>
-      <button class="medio-pago-btn" data-pago="Mercado Pago">Mercado Pago</button>
-    </div>
+      <div id="paso-pago">
+        <h2>Seleccione medio de pago</h2>
+        <button class="medio-pago-btn" data-pago="Tarjeta de Crédito">Tarjeta de Crédito</button>
+        <button class="medio-pago-btn" data-pago="Transferencia Bancaria">Transferencia Bancaria</button>
+        <button class="medio-pago-btn" data-pago="Mercado Pago">Mercado Pago</button>
+      </div>
 
-    <div id="paso-confirmacion" style="display:none; text-align:center;">
-      <h2>¡Compra finalizada con éxito!</h2>
-      <p>Gracias por tu compra. Medio de pago seleccionado: <span id="medio-seleccionado"></span>. Te estaremos contactando via email.</p>
+      <div id="paso-confirmacion" style="display:none; text-align:center;">
+        <h2>¡Compra finalizada con éxito!</h2>
+        <p>Gracias por tu compra. Medio de pago seleccionado: 
+          <span id="medio-seleccionado"></span>. Te estaremos contactando via email.
+        </p>
+      </div>
     </div>
   </div>
-</div>
 
-
- <script src="index.js"></script>
+  <script src="index.js"></script>
 </body>
 </html>
-
